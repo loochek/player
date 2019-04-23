@@ -28,3 +28,4 @@ for i in timeline:
         print(i[1])
         for char in i[1]:
             keypresser.pressLetter(char)
+time.sleep(1)
