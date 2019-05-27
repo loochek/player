@@ -26,6 +26,5 @@ for i in timeline:
         time.sleep(float(i[1]))
     else:
         print(i[1])
-        for char in i[1]:
-            keypresser.pressLetter(char)
+        keypresser.typer(i[1])
 time.sleep(1)
