@@ -104,7 +104,7 @@ def getKeyValue(charIn):
     if(charIn in ")!@#$%^&*("):
         return ")!@#$%^&*(".index(charIn) + 48
     
-def pressLetter(charIn):
+def type_letter(charIn):
     kv = getKeyValue(charIn)
     if(isShifted(charIn)):
         PressKey(160)

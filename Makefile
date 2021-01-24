@@ -1,11 +1,7 @@
-MIDIS=$(wildcard *.mid)
-CSVS=${MIDIS:%.mid=%.json}
-JSONS=${MIDIS:%.mid=%.json}
+MIDIS=$(wildcard midis/*.mid)
+ROLLS=${MIDIS:midis/%.mid=rolls/%.roll}
 
-all: ${JSONS}
+all: ${ROLLS}
 
-%.json: %.csv
-	py translator.py $< $@
-	
-%.csv: %.mid
-	Midicsv.exe $< $@
+rolls/%.roll: midis/%.mid
+	./mid2roll.py $< $@
